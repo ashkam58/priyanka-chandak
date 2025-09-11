@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --glass-bg: rgba(255,255,255,0.08);
+  --glass-brd: rgba(255,255,255,0.15);
+  --bg-color: theme('colors.white');
+  --text-color: theme('colors.slate.900');
+}
+
+.dark {
+  --glass-bg: rgba(13,20,37,0.35);
+  --glass-brd: rgba(255,255,255,0.12);
+  --bg-color: theme('colors.slate.950');
+  --text-color: theme('colors.slate.100');
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glass utility */
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-brd);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  @apply rounded-3xl shadow-soft;
+}
+
+.section-pad { @apply py-16 md:py-24; }
+.container { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Calligraphy stroke styling */
+.calligraphy-path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 5;
+}
+
+/* Hide canvas during print */
+@media print {
+  canvas { display: none !important; }
+}
+
+/* Dark mode specific overrides */
+.dark {
+  color-scheme: dark;
+}
