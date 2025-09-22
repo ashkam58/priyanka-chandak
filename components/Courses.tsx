@@ -235,7 +235,7 @@ const CourseCard = ({ course, animationDelay = 0 }: CourseCardProps) => {
         </CardContent>
 
         <div className="px-6 pb-6 mt-auto pt-4">
-          <Button className="w-full text-lg py-6" variant={buttonVariant}>
+          <Button className="w-full text-lg py-6" variant={buttonVariant} cta>
             {buttonText}
           </Button>
         </div>

@@ -94,7 +94,7 @@ export default function Navigation() {
               transition={{ delay: 0.2 }}
               className="hidden md:block"
             >
-              <Button onClick={() => scrollToSection("#courses")}>
+              <Button cta>
                 Start Learning
               </Button>
             </motion.div>
@@ -138,8 +138,8 @@ export default function Navigation() {
                 ))}
                 <div className="px-4 pt-2">
                   <Button 
-                    onClick={() => scrollToSection("#courses")}
                     className="w-full"
+                    cta
                   >
                     Start Learning
                   </Button>
