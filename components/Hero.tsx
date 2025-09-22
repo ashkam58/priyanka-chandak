@@ -178,7 +178,7 @@ export default function Hero() {
           <div className="relative animate-fade-in-delayed">
             <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/hero-image.png"
+                src="/imageHero.jpg"
                 alt="Priyanka Chandak - Calligraphy and Cubing Expert"
                 width={600}
                 height={600}
