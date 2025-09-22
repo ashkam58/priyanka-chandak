@@ -2,6 +2,9 @@
 import { useState, useEffect } from 'react';
 import { Sparkles, Star, PenTool, Play, Award, Users, Heart } from 'lucide-react';
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+// If you have a custom Button component, import it here:
+// import Button from './Button';
 
 type StarType = {
   id: number;
@@ -130,20 +133,29 @@ export default function Hero() {
               From <span className="text-yellow-600 dark:text-yellow-400 font-semibold">Pyraminx to shapeshifters</span>, from elegant brush scripts to modern lettering—train with a teacher whose daughter mesmerized audiences on <span className="text-purple-600 dark:text-purple-400 font-semibold">India's Got Talent</span> solving cubes while hula hooping! ✨
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 pt-4">
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-black font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25 hover:scale-105">
+            <div className="flex items-center gap-4">
+              <Button
+                size="lg"
+                className="group relative px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-black font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25 hover:scale-105"
+                cta
+                aria-label="Start Learning on WhatsApp"
+              >
                 <span className="relative z-10 flex items-center gap-2">
                   <Play className="w-5 h-5" />
                   Start Learning
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </button>
-              
-              <button className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-slate-700 dark:text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 flex items-center gap-2 group">
+              </Button>
+
+              <Button
+                variant="ghost"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-slate-700 dark:text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 flex items-center gap-2 group"
+                cta
+                aria-label="Our Story on WhatsApp"
+              >
                 <Star className="w-5 h-5 text-yellow-400 transition-transform duration-300 group-hover:rotate-12" />
                 Our Story
-              </button>
+              </Button>
             </div>
 
             {/* Stats */}

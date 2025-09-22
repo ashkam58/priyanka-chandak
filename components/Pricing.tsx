@@ -158,6 +158,7 @@ export default function Pricing() {
                     className="w-full mb-6" 
                     variant={plan.buttonVariant}
                     size="lg"
+                    cta
                   >
                     {plan.buttonText}
                   </Button>
